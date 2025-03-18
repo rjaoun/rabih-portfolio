@@ -36,37 +36,39 @@ const Hero = () => {
       className="min-h-screen flex items-center justify-center pt-20 overflow-hidden relative"
       id="hero"
     >
-      {/* Full-width banner image overlay */}
+      {/* Full-width banner image overlay - Adjusted opacity and contrast */}
       <div className="absolute inset-0 w-full h-full z-0">
-        <div className="absolute inset-0 bg-foreground/60 mix-blend-multiply z-10"></div>
+        <div className="absolute inset-0 bg-foreground/40 mix-blend-multiply z-10"></div>
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
               "url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7')",
+            backgroundPosition: "center 30%",
+            filter: "brightness(1.1) contrast(1.1)"
           }}
         ></div>
       </div>
 
       <div className="container grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center relative z-10">
-        <div className="space-y-6 animate-on-scroll opacity-0 delay-100">
+        <div className="space-y-6 animate-on-scroll opacity-0 delay-100 bg-background/10 backdrop-blur-sm p-6 rounded-lg">
           <div className="inline-block px-4 py-1 rounded-full bg-primary/90 text-background text-sm font-medium">
             Digital Designer & Developer
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium leading-tight text-white">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium leading-tight text-white drop-shadow-md">
             <AnimatedText
               text="Web Development & Design Solutions"
               tag="span"
               duration={20}
             />
           </h1>
-          <p className="text-white/90 text-lg max-w-lg">
+          <p className="text-white text-lg max-w-lg drop-shadow-md font-medium">
             Crafting exceptional digital experiences with modern technologies and design principles that engage your audience and elevate your brand.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <a
               href="#projects"
-              className="px-8 py-3 bg-primary text-background rounded-md transition-all hover:bg-primary/90 inline-flex items-center justify-center"
+              className="px-8 py-3 bg-primary text-background rounded-md transition-all hover:bg-primary/90 inline-flex items-center justify-center font-medium"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
@@ -74,7 +76,7 @@ const Hero = () => {
             </a>
             <a
               href="#contact"
-              className="px-8 py-3 border border-white rounded-md transition-all hover:bg-white/10 inline-flex items-center justify-center text-white"
+              className="px-8 py-3 border border-white bg-white/10 rounded-md transition-all hover:bg-white/20 inline-flex items-center justify-center text-white font-medium"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
@@ -104,7 +106,7 @@ const Hero = () => {
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
         <a
           href="#projects"
-          className="flex items-center justify-center w-10 h-10 rounded-full border border-white text-white"
+          className="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-background/20 backdrop-blur-sm text-white"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
