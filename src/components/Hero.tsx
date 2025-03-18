@@ -33,30 +33,40 @@ const Hero = () => {
   return (
     <section
       ref={heroRef}
-      className="min-h-screen flex items-center justify-center pt-20 overflow-hidden"
+      className="min-h-screen flex items-center justify-center pt-20 overflow-hidden relative"
       id="hero"
     >
-      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+      {/* Full-width banner image overlay */}
+      <div className="absolute inset-0 w-full h-full z-0">
+        <div className="absolute inset-0 bg-foreground/60 mix-blend-multiply z-10"></div>
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7')",
+          }}
+        ></div>
+      </div>
+
+      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center relative z-10">
         <div className="space-y-6 animate-on-scroll opacity-0 delay-100">
-          <div className="inline-block px-4 py-1 rounded-full bg-muted text-sm font-medium">
+          <div className="inline-block px-4 py-1 rounded-full bg-primary/90 text-background text-sm font-medium">
             Digital Designer & Developer
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium leading-tight text-white">
             <AnimatedText
-              text="Creating digital experiences that amaze and inspire."
+              text="Web Development & Design Solutions"
               tag="span"
               duration={20}
             />
           </h1>
-          <p className="text-muted-foreground text-lg max-w-lg">
-            I design and build digital experiences with meticulous attention to
-            detail, creating visually stunning interfaces that connect with
-            people.
+          <p className="text-white/90 text-lg max-w-lg">
+            Crafting exceptional digital experiences with modern technologies and design principles that engage your audience and elevate your brand.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <a
               href="#projects"
-              className="px-8 py-3 bg-foreground text-background rounded-md transition-all hover:bg-foreground/90 inline-flex items-center justify-center"
+              className="px-8 py-3 bg-primary text-background rounded-md transition-all hover:bg-primary/90 inline-flex items-center justify-center"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
@@ -64,7 +74,7 @@ const Hero = () => {
             </a>
             <a
               href="#contact"
-              className="px-8 py-3 border border-foreground rounded-md transition-all hover:bg-foreground/5 inline-flex items-center justify-center"
+              className="px-8 py-3 border border-white rounded-md transition-all hover:bg-white/10 inline-flex items-center justify-center text-white"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
@@ -80,21 +90,21 @@ const Hero = () => {
             transform: `translate(${position.x}px, ${position.y}px)`,
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-muted to-accent opacity-70 mix-blend-multiply z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/40 mix-blend-multiply z-10"></div>
           <div
             className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 project-image"
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d')",
+                "url('https://images.unsplash.com/photo-1498050108023-c5249f4df085')",
             }}
           ></div>
         </div>
       </div>
 
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
         <a
           href="#projects"
-          className="flex items-center justify-center w-10 h-10 rounded-full border border-foreground"
+          className="flex items-center justify-center w-10 h-10 rounded-full border border-white text-white"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
