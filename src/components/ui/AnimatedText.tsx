@@ -21,6 +21,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
 }) => {
   const [displayedText, setDisplayedText] = useState("");
   const [isVisible, setIsVisible] = useState(false);
+  const [isAnimationComplete, setIsAnimationComplete] = useState(false);
   const elementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -35,6 +36,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
           if (!once) {
             setIsVisible(false);
             setDisplayedText("");
+            setIsAnimationComplete(false);
           }
         }
       },
@@ -63,6 +65,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
         
         if (currentIndex >= text.length) {
           clearInterval(interval);
+          setIsAnimationComplete(true);
         }
       }, intervalDelay);
       
@@ -72,13 +75,18 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
     return () => clearTimeout(timer);
   }, [text, isVisible, delay, duration]);
 
+  // If animation is complete or we're not visible, show full text
+  const textToShow = isAnimationComplete || !isVisible ? text : displayedText;
+
   return (
     <div ref={elementRef}>
       <Tag className={cn("", className)}>
-        {displayedText}
-        <span className="inline-block w-0.5 h-5 bg-foreground animate-pulse-slow ml-0.5">
-          &nbsp;
-        </span>
+        {textToShow}
+        {isVisible && !isAnimationComplete && (
+          <span className="inline-block w-0.5 h-5 bg-foreground animate-pulse-slow ml-0.5">
+            &nbsp;
+          </span>
+        )}
       </Tag>
     </div>
   );

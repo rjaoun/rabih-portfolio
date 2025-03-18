@@ -1,5 +1,5 @@
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import AnimatedText from "@/components/ui/AnimatedText";
 import useParallax from "@/hooks/useParallax";
 import { useCursor } from "@/context/CursorContext";
@@ -10,6 +10,18 @@ const Hero = () => {
   const imageRef = useRef<HTMLDivElement>(null);
   const { setIsHovered } = useCursor();
   const { position } = useParallax(imageRef, { speed: 0.05, reverse: true });
+  const [skills] = useState([
+    { text: "React", x: 10, y: 20, delay: 0.5 },
+    { text: "JavaScript", x: 70, y: 15, delay: 0.7 },
+    { text: "TypeScript", x: 30, y: 70, delay: 0.9 },
+    { text: "CSS", x: 20, y: 85, delay: 1.1 },
+    { text: "HTML5", x: 85, y: 30, delay: 1.3 },
+    { text: "UI/UX", x: 50, y: 40, delay: 1.5 },
+    { text: "Figma", x: 75, y: 60, delay: 1.7 },
+    { text: "Tailwind", x: 40, y: 10, delay: 1.9 },
+    { text: "Responsive", x: 10, y: 50, delay: 2.1 },
+    { text: "Next.js", x: 60, y: 80, delay: 2.3 },
+  ]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -50,6 +62,23 @@ const Hero = () => {
         ></div>
       </div>
 
+      {/* Floating skill words */}
+      {skills.map((skill, index) => (
+        <div
+          key={index}
+          className="absolute z-20 text-white/80 font-medium px-3 py-1 rounded-full bg-primary/30 backdrop-blur-sm animate-float select-none"
+          style={{
+            left: `${skill.x}%`,
+            top: `${skill.y}%`,
+            animationDelay: `${skill.delay}s`,
+            transform: `translate(-50%, -50%) translateY(${Math.sin(Date.now() * 0.001 + index) * 10}px)`,
+            transition: "transform 2s ease-in-out",
+          }}
+        >
+          {skill.text}
+        </div>
+      ))}
+
       <div className="container grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center relative z-10">
         <div className="space-y-6 animate-on-scroll opacity-0 delay-100 bg-background/10 backdrop-blur-sm p-6 rounded-lg">
           <div className="inline-block px-4 py-1 rounded-full bg-primary/90 text-background text-sm font-medium">
@@ -60,6 +89,7 @@ const Hero = () => {
               text="Web Development & Design Solutions"
               tag="span"
               duration={20}
+              once={true}
             />
           </h1>
           <p className="text-white text-lg max-w-lg drop-shadow-md font-medium">
