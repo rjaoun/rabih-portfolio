@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useCursor } from "@/context/CursorContext";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -72,17 +73,20 @@ const Navbar = () => {
               {item.label}
             </a>
           ))}
+          <ThemeToggle />
         </nav>
 
-        <button
-          className="md:hidden z-10"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="md:hidden flex items-center gap-4 z-10">
+          <ThemeToggle />
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
 
         <div
           className={`fixed inset-0 bg-background flex flex-col items-center justify-center transition-transform duration-500 ease-in-out ${

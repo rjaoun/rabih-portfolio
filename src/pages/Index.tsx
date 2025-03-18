@@ -7,6 +7,7 @@ import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { CursorProvider } from "@/context/CursorContext";
+import { ThemeProvider } from "@/context/ThemeContext";
 import { animateOnScroll, useSmoothScroll } from "@/lib/animations";
 
 const Index = () => {
@@ -23,18 +24,20 @@ const Index = () => {
   }, []);
 
   return (
-    <CursorProvider>
-      <div className="min-h-screen">
-        <Navbar />
-        <main>
-          <Hero />
-          <Projects />
-          <About />
-          <Contact />
-        </main>
-        <Footer />
-      </div>
-    </CursorProvider>
+    <ThemeProvider>
+      <CursorProvider>
+        <div className="min-h-screen">
+          <Navbar />
+          <main>
+            <Hero />
+            <Projects />
+            <About />
+            <Contact />
+          </main>
+          <Footer />
+        </div>
+      </CursorProvider>
+    </ThemeProvider>
   );
 };
 
