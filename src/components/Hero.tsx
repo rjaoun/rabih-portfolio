@@ -1,4 +1,3 @@
-
 import { useRef, useEffect, useState } from "react";
 import AnimatedText from "@/components/ui/AnimatedText";
 import useParallax from "@/hooks/useParallax";
@@ -67,20 +66,23 @@ const Hero = () => {
         </div>
       ))}
 
-      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center relative z-10">
+      <div className="container grid grid-cols-1 items-center relative z-10">
         <div className="space-y-6 animate-on-scroll opacity-0 delay-100 bg-background/50 backdrop-blur-sm p-6 rounded-lg">
           <div className="inline-block px-4 py-1 rounded-full bg-primary/90 text-primary-foreground text-sm font-medium">
             Digital Designer & Developer
           </div>
-          <h1 className={`text-4xl md:text-5xl lg:text-6xl font-medium leading-tight ${theme === 'light' ? 'text-gray-800' : 'text-foreground'}`}>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium leading-tight">
             <AnimatedText
               text="Web Development & Design Solutions"
               tag="span"
               duration={20}
               once={true}
+              className={theme === 'light' ? 'text-gray-800' : 'text-foreground'}
             />
           </h1>
-          <p className={`text-lg max-w-lg font-medium ${theme === 'light' ? 'text-gray-700' : 'text-foreground'}`}>
+          <p className={`text-lg max-w-lg font-medium ${
+            theme === 'light' ? 'text-gray-700' : 'text-foreground'
+          }`}>
             Crafting exceptional digital experiences with modern technologies and design principles that engage your audience and elevate your brand.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -105,19 +107,6 @@ const Hero = () => {
               Contact Me
             </a>
           </div>
-        </div>
-
-        <div
-          ref={imageRef}
-          className="relative h-[500px] w-full overflow-hidden rounded-lg animate-on-scroll opacity-0 delay-300"
-          style={{
-            transform: `translate(${position.x}px, ${position.y}px)`,
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/40 mix-blend-multiply z-10"></div>
-          <div
-            className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 project-image bg-secondary/50"
-          ></div>
         </div>
       </div>
 
