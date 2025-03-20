@@ -49,7 +49,7 @@ const Hero = () => {
       ref={heroRef}
       className={`min-h-screen flex items-center justify-center pt-20 overflow-hidden relative ${
         theme === 'light' 
-          ? 'bg-gradient-to-br from-gray-100 to-slate-200' 
+          ? 'bg-gradient-to-br from-[#51e2f5]/80 to-[#51e2f5]/50' 
           : 'bg-gradient-to-br from-background to-secondary'
       }`}
       id="hero"
