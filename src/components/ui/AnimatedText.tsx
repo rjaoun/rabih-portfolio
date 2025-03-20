@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState, useRef } from "react";
 import { cn } from "@/lib/utils";
+import { useTheme } from "@/context/ThemeContext";
 
 interface AnimatedTextProps {
   text: string;
@@ -23,6 +24,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
   const [isVisible, setIsVisible] = useState(false);
   const [isAnimationComplete, setIsAnimationComplete] = useState(false);
   const elementRef = useRef<HTMLDivElement>(null);
+  const { theme } = useTheme();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -83,7 +85,9 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
       <Tag className={cn("", className)}>
         {textToShow}
         {isVisible && !isAnimationComplete && (
-          <span className="inline-block w-0.5 h-5 bg-foreground animate-pulse-slow ml-0.5">
+          <span className={`inline-block w-0.5 h-5 animate-pulse-slow ml-0.5 ${
+            theme === 'light' ? 'bg-gray-800' : 'bg-foreground'
+          }`}>
             &nbsp;
           </span>
         )}

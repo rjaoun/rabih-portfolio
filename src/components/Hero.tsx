@@ -4,11 +4,13 @@ import AnimatedText from "@/components/ui/AnimatedText";
 import useParallax from "@/hooks/useParallax";
 import { useCursor } from "@/context/CursorContext";
 import { ArrowDown } from "lucide-react";
+import { useTheme } from "@/context/ThemeContext";
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
   const { setIsHovered } = useCursor();
+  const { theme } = useTheme();
   const { position } = useParallax(imageRef, { speed: 0.05, reverse: true });
   const [skills] = useState([
     { text: "React", x: 10, y: 20, delay: 0.5 },
@@ -67,10 +69,10 @@ const Hero = () => {
 
       <div className="container grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center relative z-10">
         <div className="space-y-6 animate-on-scroll opacity-0 delay-100 bg-background/50 backdrop-blur-sm p-6 rounded-lg">
-          <div className="inline-block px-4 py-1 rounded-full bg-primary/90 text-background text-sm font-medium">
+          <div className="inline-block px-4 py-1 rounded-full bg-primary/90 text-primary-foreground text-sm font-medium">
             Digital Designer & Developer
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium leading-tight text-foreground">
+          <h1 className={`text-4xl md:text-5xl lg:text-6xl font-medium leading-tight ${theme === 'light' ? 'text-gray-800' : 'text-foreground'}`}>
             <AnimatedText
               text="Web Development & Design Solutions"
               tag="span"
@@ -78,13 +80,13 @@ const Hero = () => {
               once={true}
             />
           </h1>
-          <p className="text-foreground text-lg max-w-lg font-medium">
+          <p className={`text-lg max-w-lg font-medium ${theme === 'light' ? 'text-gray-700' : 'text-foreground'}`}>
             Crafting exceptional digital experiences with modern technologies and design principles that engage your audience and elevate your brand.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <a
               href="#projects"
-              className="px-8 py-3 bg-primary text-background rounded-md transition-all hover:bg-primary/90 inline-flex items-center justify-center font-medium"
+              className="px-8 py-3 bg-primary text-primary-foreground rounded-md transition-all hover:bg-primary/90 inline-flex items-center justify-center font-medium"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
@@ -92,7 +94,11 @@ const Hero = () => {
             </a>
             <a
               href="#contact"
-              className="px-8 py-3 border border-foreground bg-background/10 rounded-md transition-all hover:bg-background/20 inline-flex items-center justify-center text-foreground font-medium"
+              className={`px-8 py-3 border rounded-md transition-all inline-flex items-center justify-center font-medium ${
+                theme === 'light' 
+                  ? 'border-gray-400 bg-gray-100/50 hover:bg-gray-200/70 text-gray-800' 
+                  : 'border-foreground bg-background/10 hover:bg-background/20 text-foreground'
+              }`}
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
@@ -118,7 +124,11 @@ const Hero = () => {
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
         <a
           href="#projects"
-          className="flex items-center justify-center w-10 h-10 rounded-full border border-foreground bg-background/20 backdrop-blur-sm text-foreground"
+          className={`flex items-center justify-center w-10 h-10 rounded-full backdrop-blur-sm ${
+            theme === 'light'
+              ? 'border border-gray-400 bg-gray-100/20 text-gray-800'
+              : 'border border-foreground bg-background/20 text-foreground'
+          }`}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
