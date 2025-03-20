@@ -12,9 +12,12 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   const [theme, setTheme] = useState<Theme>(() => {
-    const savedTheme = localStorage.getItem("theme");
-    return (savedTheme as Theme) || 
-      (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    if (typeof window !== 'undefined') {
+      const savedTheme = localStorage.getItem("theme");
+      return (savedTheme as Theme) || 
+        (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    }
+    return "light";
   });
 
   const toggleTheme = () => {

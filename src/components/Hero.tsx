@@ -1,3 +1,4 @@
+
 import { useRef, useEffect, useState } from "react";
 import AnimatedText from "@/components/ui/AnimatedText";
 import useParallax from "@/hooks/useParallax";
@@ -46,7 +47,11 @@ const Hero = () => {
   return (
     <section
       ref={heroRef}
-      className="min-h-screen flex items-center justify-center pt-20 overflow-hidden relative bg-gradient-to-br from-background to-secondary"
+      className={`min-h-screen flex items-center justify-center pt-20 overflow-hidden relative ${
+        theme === 'light' 
+          ? 'bg-gradient-to-br from-gray-100 to-slate-200' 
+          : 'bg-gradient-to-br from-background to-secondary'
+      }`}
       id="hero"
     >
       {/* Floating skill words */}
@@ -66,8 +71,12 @@ const Hero = () => {
         </div>
       ))}
 
-      <div className="container grid grid-cols-1 items-center relative z-10">
-        <div className="space-y-6 animate-on-scroll opacity-0 delay-100 bg-background/50 backdrop-blur-sm p-6 rounded-lg">
+      <div className="container mx-auto px-6 relative z-10">
+        <div className={`space-y-6 p-8 rounded-lg ${
+          theme === 'light' 
+            ? 'bg-white/80 shadow-md' 
+            : 'bg-background/50'
+        } backdrop-blur-sm`}>
           <div className="inline-block px-4 py-1 rounded-full bg-primary/90 text-primary-foreground text-sm font-medium">
             Digital Designer & Developer
           </div>

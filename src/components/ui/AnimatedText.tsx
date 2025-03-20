@@ -20,8 +20,8 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
   duration = 50,
   tag: Tag = "div",
 }) => {
-  const [displayedText, setDisplayedText] = useState("");
-  const [isVisible, setIsVisible] = useState(false);
+  const [displayedText, setDisplayedText] = useState(text);
+  const [isVisible, setIsVisible] = useState(true);
   const [isAnimationComplete, setIsAnimationComplete] = useState(false);
   const elementRef = useRef<HTMLDivElement>(null);
   const { theme } = useTheme();
@@ -60,6 +60,9 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
     let intervalDelay = duration;
     let currentIndex = 0;
     
+    // Start with an empty string and build up
+    setDisplayedText("");
+    
     const timer = setTimeout(() => {
       const interval = setInterval(() => {
         setDisplayedText(text.substring(0, currentIndex + 1));
@@ -77,13 +80,13 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
     return () => clearTimeout(timer);
   }, [text, isVisible, delay, duration]);
 
-  // If animation is complete or we're not visible, show full text
+  // Ensure text is always visible even if animation state is inconsistent
   const textToShow = isAnimationComplete || !isVisible ? text : displayedText;
 
   return (
-    <div ref={elementRef}>
+    <div ref={elementRef} className="overflow-visible">
       <Tag className={cn("", className)}>
-        {textToShow}
+        {textToShow || text}  {/* Fallback to original text if empty */}
         {isVisible && !isAnimationComplete && (
           <span className={`inline-block w-0.5 h-5 animate-pulse-slow ml-0.5 ${
             theme === 'light' ? 'bg-gray-800' : 'bg-foreground'
