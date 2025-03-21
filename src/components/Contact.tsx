@@ -6,7 +6,13 @@ import { useToast } from "@/components/ui/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { ArrowUpRight } from "lucide-react";
+import { 
+  ArrowUpRight, 
+  Twitter, 
+  Linkedin, 
+  Instagram, 
+  Github 
+} from "lucide-react";
 
 const Contact = () => {
   const { setIsHovered } = useCursor();
@@ -47,10 +53,10 @@ const Contact = () => {
   };
 
   const socials = [
-    { name: "Twitter", url: "https://twitter.com" },
-    { name: "LinkedIn", url: "https://linkedin.com" },
-    { name: "Instagram", url: "https://instagram.com" },
-    { name: "GitHub", url: "https://github.com" },
+    { name: "Twitter", url: "https://twitter.com", icon: <Twitter size={16} /> },
+    { name: "LinkedIn", url: "https://linkedin.com", icon: <Linkedin size={16} /> },
+    { name: "Instagram", url: "https://instagram.com", icon: <Instagram size={16} /> },
+    { name: "GitHub", url: "https://github.com", icon: <Github size={16} /> },
   ];
 
   return (
@@ -166,10 +172,11 @@ const Contact = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 px-6 py-3 rounded-full bg-muted hover:bg-muted/80 transition-all"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-muted hover:bg-muted/80 transition-all"
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
                 >
+                  {social.icon}
                   {social.name}
                   <ArrowUpRight size={14} />
                 </a>
