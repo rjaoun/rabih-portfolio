@@ -153,7 +153,7 @@ const Contact = () => {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="w-full sm:w-auto bg-foreground text-background hover:bg-foreground/90"
+              className="w-full sm:w-auto bg-foreground text-background hover:bg-foreground/90 transform transition-transform hover:scale-105 hover:-translate-y-1"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
@@ -172,7 +172,7 @@ const Contact = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-muted hover:bg-muted/80 transition-all"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-muted hover:bg-muted/80 transition-all transform hover:scale-105 hover:-translate-y-1 hover:shadow-md"
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
                 >

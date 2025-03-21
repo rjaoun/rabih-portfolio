@@ -13,7 +13,7 @@ const ThemeToggle = () => {
       variant="ghost"
       size="icon"
       onClick={toggleTheme}
-      className="rounded-full"
+      className="rounded-full transition-all duration-200 hover:scale-110"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       aria-label="Toggle theme"
