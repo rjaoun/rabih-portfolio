@@ -42,5 +42,17 @@
 	color: #888;
 }
 
-/* Add code background image to public folder */
-/* This is just a placeholder comment to remind us that we need an image in this location */
+/* Background image optimization */
+[style*="background-image"] {
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Adjust image quality on high DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  [style*="background-image"] {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
