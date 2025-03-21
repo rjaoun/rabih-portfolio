@@ -1,3 +1,4 @@
+
 import { useRef, useEffect, useState } from "react";
 import AnimatedText from "@/components/ui/AnimatedText";
 import useParallax from "@/hooks/useParallax";
@@ -78,7 +79,7 @@ const Hero = () => {
 				<div
 					className={`space-y-6 p-8 rounded-lg ${
 						theme === "light" ? "bg-white/80 shadow-md" : "bg-background/50"
-					} backdrop-blur-sm`}
+					} backdrop-blur-sm bg-[url('/code-background.jpg')] bg-cover bg-center bg-blend-overlay`}
 				>
 					<div className="inline-block px-4 py-1 rounded-full bg-primary/90 text-primary-foreground text-sm font-medium">
 						Digital Designer & Developer
