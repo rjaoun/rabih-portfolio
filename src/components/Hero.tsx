@@ -12,6 +12,7 @@ const Hero = () => {
 	const { setIsHovered } = useCursor();
 	const { theme } = useTheme();
 	const { position } = useParallax(imageRef, { speed: 0.05, reverse: true });
+	const [showFixedArrow, setShowFixedArrow] = useState(false);
 	const [skills] = useState([
 		{ text: "React", x: 10, y: 20, delay: 0.5 },
 		{ text: "JavaScript", x: 70, y: 25, delay: 0.7 },
@@ -44,6 +45,21 @@ const Hero = () => {
 		});
 
 		return () => observer.disconnect();
+	}, []);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			if (heroRef.current) {
+				const heroBottom = heroRef.current.getBoundingClientRect().bottom;
+				const windowHeight = window.innerHeight;
+				
+				// Show fixed arrow when we scroll past the hero section
+				setShowFixedArrow(heroBottom < windowHeight * 0.5);
+			}
+		};
+
+		window.addEventListener("scroll", handleScroll);
+		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
 
 	return (
@@ -130,6 +146,7 @@ const Hero = () => {
 				</div>
 			</div>
 
+			{/* Regular arrow in the hero section */}
 			<div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
 				<a
 					href="#projects"
@@ -144,6 +161,24 @@ const Hero = () => {
 					<ArrowDown size={20} />
 				</a>
 			</div>
+
+			{/* Fixed arrow that appears when scrolling past hero */}
+			{showFixedArrow && (
+				<div className="fixed bottom-6 right-6 z-50 transition-all duration-300 opacity-80 hover:opacity-100">
+					<a
+						href="#projects"
+						className={`flex items-center justify-center w-12 h-12 rounded-full shadow-lg backdrop-blur-md transition-transform hover:scale-110 hover:-translate-y-1 ${
+							theme === "light"
+								? "bg-primary/90 text-white border border-primary"
+								: "bg-primary text-primary-foreground border border-primary/30"
+						}`}
+						onMouseEnter={() => setIsHovered(true)}
+						onMouseLeave={() => setIsHovered(false)}
+					>
+						<ArrowDown size={24} />
+					</a>
+				</div>
+			)}
 		</section>
 	);
 };
