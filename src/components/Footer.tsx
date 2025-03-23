@@ -49,7 +49,7 @@ const Footer = () => {
 				<div className="container">
 					<div className="flex flex-col md:flex-row justify-between items-center">
 						<div className="mb-6 md:mb-0">
-							<h3 className="text-xl font-medium">Rabih</h3>
+							<h3 className="text-xl font-medium font-code">Rabih<span className="text-primary">_</span></h3>
 							<p className="text-muted-foreground mt-2">
 								Crafting digital experiences that inspires.
 							</p>
@@ -59,7 +59,7 @@ const Footer = () => {
 							<div className="flex flex-wrap justify-center gap-6">
 								<a
 									href="#projects"
-									className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+									className="text-sm font-mono text-muted-foreground hover:text-foreground transition-colors"
 									onMouseEnter={() => setIsHovered(true)}
 									onMouseLeave={() => setIsHovered(false)}
 								>
@@ -67,7 +67,7 @@ const Footer = () => {
 								</a>
 								<a
 									href="#about"
-									className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+									className="text-sm font-mono text-muted-foreground hover:text-foreground transition-colors"
 									onMouseEnter={() => setIsHovered(true)}
 									onMouseLeave={() => setIsHovered(false)}
 								>
@@ -75,7 +75,7 @@ const Footer = () => {
 								</a>
 								<a
 									href="#contact"
-									className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+									className="text-sm font-mono text-muted-foreground hover:text-foreground transition-colors"
 									onMouseEnter={() => setIsHovered(true)}
 									onMouseLeave={() => setIsHovered(false)}
 								>
@@ -86,11 +86,11 @@ const Footer = () => {
 					</div>
 
 					<div className="border-t border-border/50 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-						<p className="text-sm text-muted-foreground mb-4 md:mb-0">
-							© {year} Rabih. All rights reserved.
+						<p className="text-sm font-mono text-muted-foreground mb-4 md:mb-0">
+							© {year} <span className="text-primary">console.log(</span>"Rabih"<span className="text-primary">)</span>;
 						</p>
-						<p className="text-sm text-muted-foreground">
-							Designed & Built with ♥️
+						<p className="text-sm font-mono text-muted-foreground">
+							<span className="text-primary">{`{`}</span> Designed & Built with ♥️ <span className="text-primary">{`}`}</span>
 						</p>
 					</div>
 				</div>
