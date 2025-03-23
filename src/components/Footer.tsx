@@ -82,16 +82,6 @@ const Footer = () => {
 									Contact
 								</a>
 							</div>
-
-							<a
-								href="#hero"
-								className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-border hover:bg-muted transition-all"
-								onMouseEnter={() => setIsHovered(true)}
-								onMouseLeave={() => setIsHovered(false)}
-								aria-label="Back to top"
-							>
-								<ArrowUp size={16} />
-							</a>
 						</div>
 					</div>
 
