@@ -82,7 +82,7 @@ const About = () => {
             <div className="pt-4">
               <a
                 href="#contact"
-                className="px-8 py-3 bg-foreground text-background rounded-md transition-all hover:bg-foreground/90 inline-flex items-center justify-center"
+                className="px-8 py-3 bg-foreground text-background rounded-md transition-all hover:bg-foreground/90 inline-flex items-center justify-center transform hover:scale-105 hover:-translate-y-1 hover:shadow-md"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
               >
