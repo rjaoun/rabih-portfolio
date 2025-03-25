@@ -107,7 +107,7 @@ const Hero = () => {
 					<div className="flex flex-col sm:flex-row gap-4 pt-4">
 						<a
 							href="#projects"
-							className="px-8 py-3 bg-primary text-primary-foreground rounded-md transition-all hover:bg-primary/90 inline-flex items-center justify-center font-medium"
+							className="px-8 py-3 bg-primary text-primary-foreground rounded-md transition-all hover:bg-primary/90 inline-flex items-center justify-center font-medium transform transition-transform hover:scale-105 hover:-translate-y-1"
 							onMouseEnter={() => setIsHovered(true)}
 							onMouseLeave={() => setIsHovered(false)}
 						>
@@ -118,7 +118,7 @@ const Hero = () => {
 							className={`px-8 py-3 border rounded-md transition-all inline-flex items-center justify-center font-medium ${
 								theme === "light"
 									? "border-gray-400 bg-gray-100/50 hover:bg-gray-200/70 text-gray-800"
-									: "border-foreground bg-background/10 hover:bg-background/20 text-foreground"
+									: "border-foreground bg-background/10 hover:bg-background/20 text-foreground transform transition-transform hover:scale-105 hover:-translate-y-1"
 							}`}
 							onMouseEnter={() => setIsHovered(true)}
 							onMouseLeave={() => setIsHovered(false)}
