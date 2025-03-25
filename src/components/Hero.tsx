@@ -115,7 +115,7 @@ const Hero = () => {
 						</a>
 						<a
 							href="#contact"
-							className={`px-8 py-3 border rounded-md transition-all inline-flex items-center justify-center font-medium ${
+							className={`px-8 py-3 border rounded-md transition-all inline-flex items-center justify-center font-medium transform transition-transform hover:scale-105 hover:-translate-y-1 ${
 								theme === "light"
 									? "border-gray-400 bg-gray-100/50 hover:bg-gray-200/70 text-gray-800"
 									: "border-foreground bg-background/10 hover:bg-background/20 text-foreground transform transition-transform hover:scale-105 hover:-translate-y-1"
