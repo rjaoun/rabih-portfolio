@@ -133,27 +133,43 @@ const Hero = () => {
 						>
 							Contact Me
 						</a>
+						
+						{/* Arrow button for mobile - only shown on mobile */}
+						{isMobile && (
+							<a
+								href="#projects"
+								className={`mt-4 w-10 h-10 mx-auto flex items-center justify-center rounded-full backdrop-blur-sm ${
+									theme === "light"
+										? "border border-gray-400 bg-gray-100/20 text-gray-800"
+										: "border border-foreground bg-background/20 text-foreground"
+								} animate-bounce`}
+								onMouseEnter={() => setIsHovered(true)}
+								onMouseLeave={() => setIsHovered(false)}
+							>
+								<ArrowDown size={20} />
+							</a>
+						)}
 					</div>
 				</div>
 			</div>
 
-			{/* Arrow repositioned for mobile */}
-			<div className={`absolute left-1/2 transform -translate-x-1/2 animate-bounce z-10 ${
-				isMobile ? 'bottom-5 mb-20' : 'bottom-10'
-			}`}>
-				<a
-					href="#projects"
-					className={`flex items-center justify-center w-10 h-10 rounded-full backdrop-blur-sm ${
-						theme === "light"
-							? "border border-gray-400 bg-gray-100/20 text-gray-800"
-							: "border border-foreground bg-background/20 text-foreground"
-					}`}
-					onMouseEnter={() => setIsHovered(true)}
-					onMouseLeave={() => setIsHovered(false)}
-				>
-					<ArrowDown size={20} />
-				</a>
-			</div>
+			{/* Arrow for desktop only */}
+			{!isMobile && (
+				<div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
+					<a
+						href="#projects"
+						className={`flex items-center justify-center w-10 h-10 rounded-full backdrop-blur-sm ${
+							theme === "light"
+								? "border border-gray-400 bg-gray-100/20 text-gray-800"
+								: "border border-foreground bg-background/20 text-foreground"
+						}`}
+						onMouseEnter={() => setIsHovered(true)}
+						onMouseLeave={() => setIsHovered(false)}
+					>
+						<ArrowDown size={20} />
+					</a>
+				</div>
+			)}
 		</section>
 	);
 };
