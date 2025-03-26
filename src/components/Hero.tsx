@@ -5,6 +5,7 @@ import useParallax from "@/hooks/useParallax";
 import { useCursor } from "@/context/CursorContext";
 import { ArrowDown } from "lucide-react";
 import { useTheme } from "@/context/ThemeContext";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Hero = () => {
 	const heroRef = useRef<HTMLDivElement>(null);
@@ -12,6 +13,7 @@ const Hero = () => {
 	const { setIsHovered } = useCursor();
 	const { theme } = useTheme();
 	const { position } = useParallax(imageRef, { speed: 0.05, reverse: true });
+	const isMobile = useIsMobile();
 	const [skills] = useState([
 		{ text: "React", x: 10, y: 20, delay: 0.5 },
 		{ text: "JavaScript", x: 70, y: 25, delay: 0.7 },
@@ -46,6 +48,12 @@ const Hero = () => {
 		return () => observer.disconnect();
 	}, []);
 
+	// Filter out skills that would overlap with buttons on mobile
+	const filteredSkills = isMobile 
+		? skills.filter(skill => 
+			!(skill.y > 35 && skill.y < 60 && skill.x > 35 && skill.x < 65)) 
+		: skills;
+
 	return (
 		<section
 			ref={heroRef}
@@ -57,7 +65,7 @@ const Hero = () => {
 			id="hero"
 		>
 			{/* Floating skill words */}
-			{skills.map((skill, index) => (
+			{filteredSkills.map((skill, index) => (
 				<div
 					key={index}
 					className="absolute z-20 text-foreground font-medium px-3 py-1 rounded-full bg-primary/20 backdrop-blur-sm animate-float select-none opacity-70"
@@ -129,8 +137,10 @@ const Hero = () => {
 				</div>
 			</div>
 
-			{/* Regular arrow in the hero section */}
-			<div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
+			{/* Arrow repositioned for mobile */}
+			<div className={`absolute left-1/2 transform -translate-x-1/2 animate-bounce z-10 ${
+				isMobile ? 'bottom-5 mb-20' : 'bottom-10'
+			}`}>
 				<a
 					href="#projects"
 					className={`flex items-center justify-center w-10 h-10 rounded-full backdrop-blur-sm ${
