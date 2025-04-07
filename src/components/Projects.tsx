@@ -17,13 +17,13 @@ interface Project {
 const projects: Project[] = [
 	{
 		id: 1,
-		title: "Immersive 3D Portfolio",
+		title: "Renting Tools website - 2025",
 		category: "Interactive Experience",
-		image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+		image: "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=1920&q=80",
 		description:
-			"A fully interactive 3D portfolio experience built with Three.js and WebGL",
-		slug: "immersive-3d-portfolio",
-		year: "2023",
+			"A fully responsive website that Connects with tool owners in your area and rent the equipment you need for your next project",
+		slug: "RenTools-portfolio",
+		year: "2025",
 	},
 	{
 		id: 2,
