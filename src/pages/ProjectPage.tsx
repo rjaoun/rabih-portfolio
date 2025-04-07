@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { CursorProvider, useCursor } from "@/context/CursorContext";
@@ -44,21 +45,22 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    title: "Lunar Agency Website",
-    category: "Web Design",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
-    description: "A minimalist website design for a creative agency with focus on user experience",
-    slug: "lunar-agency-website",
-    year: "2022",
+    title: "Islamic Sticker Haven",
+    category: "E-commerce",
+    image: "https://images.pexels.com/photos/323340/pexels-photo-323340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    description: "A website to purchase Islamic stickers with customization options",
+    slug: "islamic-sticker-haven",
+    year: "2023",
     content: {
-      brief: "Lunar Agency needed a website that reflected their minimalist aesthetic while providing an intuitive user experience. The design focused on clean layouts, subtle animations, and a refined color palette to convey the agency's sophisticated approach.",
-      role: "UI/UX Designer",
-      technologies: ["Figma", "React", "GSAP", "Tailwind CSS"],
+      brief: "Islamic Sticker Haven is an e-commerce platform dedicated to offering high-quality Islamic stickers. The website provides various customization options allowing customers to personalize their stickers according to their preferences and needs.",
+      role: "Frontend Developer",
+      technologies: ["React", "Tailwind CSS", "Shadcn UI", "TypeScript"],
       images: [
-        "https://images.unsplash.com/photo-1518770660439-4636190af475",
-        "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-        "https://images.unsplash.com/photo-1649972904349-6e44c42644a7"
-      ]
+        "https://images.pexels.com/photos/323340/pexels-photo-323340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/1036841/pexels-photo-1036841.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/5632385/pexels-photo-5632385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      ],
+      website: "https://islamic-sticker-haven.lovable.app/"
     }
   },
   {

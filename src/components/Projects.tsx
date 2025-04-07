@@ -28,13 +28,13 @@ const projects: Project[] = [
 	},
 	{
 		id: 2,
-		title: "Lunar Agency Website",
-		category: "Web Design",
-		image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+		title: "Islamic Sticker Haven",
+		category: "E-commerce",
+		image: "https://images.pexels.com/photos/323340/pexels-photo-323340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
 		description:
-			"A minimalist website design for a creative agency with focus on user experience",
-		slug: "lunar-agency-website",
-		year: "2022",
+			"A website to purchase Islamic stickers with customization options",
+		slug: "islamic-sticker-haven",
+		year: "2023",
 	},
 	{
 		id: 3,
