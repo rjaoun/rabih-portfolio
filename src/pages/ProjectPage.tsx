@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { CursorProvider, useCursor } from "@/context/CursorContext";
@@ -18,6 +17,7 @@ interface Project {
     role: string;
     technologies: string[];
     images: string[];
+    website?: string;
   };
 }
 
@@ -38,7 +38,8 @@ const projects: Project[] = [
         "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=1920&q=80",
         "https://images.unsplash.com/photo-1581783898377-1c85bf937427?auto=format&fit=crop&w=1920&q=80",
         "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1920&q=80"
-      ]
+      ],
+      website: "https://rentools.netlify.app/"
     }
   },
   {
@@ -130,7 +131,6 @@ const ProjectContent = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate data fetching
     setIsLoading(true);
     const timer = setTimeout(() => {
       const foundProject = projects.find((p) => p.slug === slug);
@@ -191,15 +191,23 @@ const ProjectContent = () => {
                 {project.title}
               </h1>
             </div>
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 px-6 py-2 border border-foreground rounded-full hover:bg-foreground hover:text-background transition-all"
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-            >
-              <span>Visit Website</span>
-              <ExternalLink size={16} />
-            </a>
+            {project.content?.website ? (
+              <a
+                href={project.content.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-2 border border-foreground rounded-full hover:bg-foreground hover:text-background transition-all"
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+              >
+                <span>Visit Website</span>
+                <ExternalLink size={16} />
+              </a>
+            ) : (
+              <span className="inline-flex items-center gap-2 px-6 py-2 border border-muted-foreground/30 rounded-full text-muted-foreground cursor-not-allowed">
+                <span>No Website</span>
+              </span>
+            )}
           </div>
           <p className="text-lg text-muted-foreground max-w-3xl">
             {project.description}
