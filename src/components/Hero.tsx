@@ -141,7 +141,7 @@ const Hero = () => {
 								{isMobile && (
 									<a
 										href="#projects"
-										className={`mt-4 w-10 h-10 mx-auto flex items-center justify-center rounded-full backdrop-blur-sm ${
+										className={`w-10 h-10 mx-auto flex items-center justify-center rounded-full backdrop-blur-sm ${
 											theme === "light"
 												? "border border-gray-400 bg-gray-100/20 text-gray-800"
 												: "border border-foreground bg-background/20 text-foreground"
@@ -158,26 +158,20 @@ const Hero = () => {
 					
 					{/* Image section */}
 					<div className="w-full md:w-1/2 flex justify-center items-center mt-8 md:mt-0">
-						<div className="relative">
-							<div 
-								className={`w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 ${
-									theme === "light" ? "border-white shadow-xl" : "border-primary/30"
+						<div 
+							className="relative"
+							ref={imageRef}
+							style={{
+								transform: `translateY(${position.y * 0.5}px)`,
+							}}
+						>
+							<img 
+								src="/lovable-uploads/9c963020-3879-49f1-bce9-a816f6dc20d9.png" 
+								alt="Profile" 
+								className={`w-64 h-64 md:w-80 md:h-80 rounded-full object-cover object-center ${
+									theme === "light" ? "border-4 border-white shadow-xl" : "border-4 border-primary/30"
 								}`}
-								style={{
-									transform: `translateY(${position.y * 0.5}px)`,
-								}}
-								ref={imageRef}
-							>
-								<img 
-									src="/lovable-uploads/9c963020-3879-49f1-bce9-a816f6dc20d9.png" 
-									alt="Profile" 
-									className="w-full h-full object-cover object-center"
-								/>
-							</div>
-							{/* Decorative circle */}
-							<div className={`absolute -z-10 w-64 h-64 md:w-80 md:h-80 rounded-full -top-2 -left-2 
-								${theme === "light" ? "bg-primary/20" : "bg-primary/10"}`}>
-							</div>
+							/>
 						</div>
 					</div>
 				</div>
