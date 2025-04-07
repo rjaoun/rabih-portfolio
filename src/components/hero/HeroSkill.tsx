@@ -20,13 +20,13 @@ const HeroSkill = ({ text, x, y, delay, index }: HeroSkillProps) => {
 
   return (
     <div
-      className="absolute z-20 text-foreground font-medium px-3 py-1 rounded-full bg-primary/20 backdrop-blur-sm animate-float select-none opacity-70"
+      className="absolute z-20 text-foreground font-medium px-3 py-1 rounded-full bg-primary/20 backdrop-blur-sm animate-float select-none opacity-70 hover:opacity-100 hover:scale-110 transition-all duration-300"
       style={{
         left: `${x}%`,
         top: `${y}%`,
         animationDelay: `${delay}s`,
         transform: `translate(-50%, -50%) translateY(${yOffset}px)`,
-        transition: "transform 2s ease-in-out",
+        transition: "transform 2s ease-in-out, opacity 0.3s ease, scale 0.3s ease",
       }}
     >
       {text}
