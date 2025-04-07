@@ -1,3 +1,4 @@
+
 import { useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { useCursor } from "@/context/CursorContext";
@@ -17,12 +18,12 @@ interface Project {
 const projects: Project[] = [
 	{
 		id: 1,
-		title: "Immersive 3D Portfolio",
-		category: "Interactive Experience",
-		image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+		title: "RenTools Website",
+		category: "Web Application",
+		image: "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=1920&q=80",
 		description:
-			"A fully interactive 3D portfolio experience built with Three.js and WebGL",
-		slug: "immersive-3d-portfolio",
+			"A platform connecting tool owners with people who need to rent equipment",
+		slug: "rentools-website",
 		year: "2023",
 	},
 	{

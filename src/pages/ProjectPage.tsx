@@ -24,20 +24,20 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Immersive 3D Portfolio",
-    category: "Interactive Experience",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-    description: "A fully interactive 3D portfolio experience built with Three.js and WebGL",
-    slug: "immersive-3d-portfolio",
+    title: "RenTools Website",
+    category: "Web Application",
+    image: "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=1920&q=80",
+    description: "A platform connecting tool owners with people who need to rent equipment",
+    slug: "rentools-website",
     year: "2023",
     content: {
-      brief: "This project showcases a fully interactive 3D portfolio experience where users can navigate through a virtual space to explore different projects and information. The goal was to create an innovative and memorable way to present creative work.",
-      role: "Designer & Developer",
-      technologies: ["Three.js", "WebGL", "JavaScript", "GLSL", "React"],
+      brief: "RenTools is a web application designed to bridge the gap between tool owners and people in need of equipment. The platform facilitates equipment rental transactions, making it easy for users to find and rent the tools they need without having to purchase them outright.",
+      role: "Full Stack Developer",
+      technologies: ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
       images: [
-        "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-        "https://images.unsplash.com/photo-1518770660439-4636190af475",
-        "https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
+        "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=1920&q=80",
+        "https://images.unsplash.com/photo-1581783898377-1c85bf937427?auto=format&fit=crop&w=1920&q=80",
+        "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1920&q=80"
       ]
     }
   },
