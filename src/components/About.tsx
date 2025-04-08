@@ -37,13 +37,11 @@ const About = () => {
             }}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-muted to-accent opacity-70 mix-blend-multiply z-10"></div>
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{
-                backgroundImage:
-                  "url('/lovable-uploads/323ace5a-e8d0-4e7f-a439-699a48ddaebd.png')",
-              }}
-            ></div>
+            <img 
+              src="/lovable-uploads/323ace5a-e8d0-4e7f-a439-699a48ddaebd.png" 
+              alt="Profile" 
+              className="absolute inset-0 w-full h-full object-cover object-center"
+            />
           </div>
 
           <div 
