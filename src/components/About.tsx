@@ -41,7 +41,7 @@ const About = () => {
               className="absolute inset-0 bg-cover bg-center"
               style={{
                 backgroundImage:
-                  "url('https://images.unsplash.com/photo-1649972904349-6e44c42644a7')",
+                  "url('/lovable-uploads/323ace5a-e8d0-4e7f-a439-699a48ddaebd.png')",
               }}
             ></div>
           </div>
