@@ -36,7 +36,6 @@ const About = () => {
               transform: `translate(${position.x}px, ${position.y}px)`,
             }}
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-muted to-accent opacity-70 mix-blend-multiply z-10"></div>
             <img 
               src="https://media-hosting.imagekit.io/4e046ac530544595/rabih.png.png?Expires=1838696195&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=PlDLMSUQtJZycAoz4VIq4hw6UmLGbvswzgky4dw7cQahSGPUbyCO4gbgY8tG6lxlIs8TBFyIifTAbtmDs4GPqqbgajbd2LI2ci8OSgtzGepGLeJUGOEQq-P9M~5sJrAKy3NJELNs1v1Ce2pX4Lb2J5y1AGbY~kjuadHUINpHbyeC1a0jEPvZftXerTo6zXVID5vOGxbVc6W5p~f334QUJI-uI3MHsjVLAW60EBsOmqTuiKj4iu4iBNDAC8T9h1RW1S~bgqrdR9z7yt3FM99usEyFKdrfNLgIjRTfrX8QloyYBqvPHOcspdCC52Bm1U3laLWQK3-5N499ubBNnOqDcA__" 
               alt="Profile" 
