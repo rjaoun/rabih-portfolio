@@ -38,7 +38,8 @@ const projects: Project[] = [
         "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1920&q=80",
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1920&q=80",
         "https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&w=1920&q=80"
-      ]
+      ],
+      website: "https://finance-focus-rjaoun.replit.app/"
     }
   },
   {
