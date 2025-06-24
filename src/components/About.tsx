@@ -1,54 +1,35 @@
-
 import { useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import { useCursor } from "@/context/CursorContext";
 import useParallax from "@/hooks/useParallax";
-
 const About = () => {
-  const { setIsHovered } = useCursor();
+  const {
+    setIsHovered
+  } = useCursor();
   const imageRef = useRef<HTMLDivElement>(null);
-  const { position } = useParallax(imageRef, { speed: 0.05 });
-  
-  const { ref: textRef, inView: textInView } = useInView({
-    threshold: 0.2,
-    triggerOnce: true,
+  const {
+    position
+  } = useParallax(imageRef, {
+    speed: 0.05
   });
-
-  const skills = [
-    "Interactive Design",
-    "Three.js",
-    "WebGL",
-    "UX/UI Design",
-    "Frontend Development",
-    "Creative Coding",
-    "Animation",
-    "Responsive Design",
-  ];
-
-  return (
-    <section id="about" className="py-20 md:py-32 bg-muted/30">
+  const {
+    ref: textRef,
+    inView: textInView
+  } = useInView({
+    threshold: 0.2,
+    triggerOnce: true
+  });
+  const skills = ["Interactive Design", "Three.js", "WebGL", "UX/UI Design", "Frontend Development", "Creative Coding", "Animation", "Responsive Design"];
+  return <section id="about" className="py-20 md:py-32 bg-muted/30">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
-          <div
-            ref={imageRef}
-            className="relative h-[500px] overflow-hidden rounded-lg order-2 lg:order-1"
-            style={{
-              transform: `translate(${position.x}px, ${position.y}px)`,
-            }}
-          >
-            <img 
-              src="/profile-image.png" 
-              alt="Profile" 
-              className="absolute inset-0 w-full h-full object-contain object-center"
-            />
+          <div ref={imageRef} className="relative h-[500px] overflow-hidden rounded-lg order-2 lg:order-1" style={{
+          transform: `translate(${position.x}px, ${position.y}px)`
+        }}>
+            <img alt="Profile" className="absolute inset-0 w-full h-full object-contain object-center" src="/lovable-uploads/db8a99cc-23c8-4b7f-835f-0a6d27b99405.png" />
           </div>
 
-          <div 
-            ref={textRef}
-            className={`space-y-6 order-1 lg:order-2 transition-all duration-1000 ${
-              textInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-            }`}
-          >
+          <div ref={textRef} className={`space-y-6 order-1 lg:order-2 transition-all duration-1000 ${textInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
             <div className="inline-block px-4 py-1 rounded-full bg-foreground/10 text-sm font-medium">
               About Me
             </div>
@@ -65,32 +46,20 @@ const About = () => {
             <div className="pt-4">
               <h3 className="text-lg font-medium mb-4">Expertise</h3>
               <div className="flex flex-wrap gap-2">
-                {skills.map((skill, index) => (
-                  <span
-                    key={index}
-                    className="px-4 py-2 bg-background rounded-full text-sm border border-border"
-                  >
+                {skills.map((skill, index) => <span key={index} className="px-4 py-2 bg-background rounded-full text-sm border border-border">
                     {skill}
-                  </span>
-                ))}
+                  </span>)}
               </div>
             </div>
             
             <div className="pt-4">
-              <a
-                href="#contact"
-                className="px-8 py-3 bg-foreground text-background rounded-md transition-all hover:bg-foreground/90 inline-flex items-center justify-center transform hover:scale-105 hover:-translate-y-1 hover:shadow-md"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-              >
+              <a href="#contact" className="px-8 py-3 bg-foreground text-background rounded-md transition-all hover:bg-foreground/90 inline-flex items-center justify-center transform hover:scale-105 hover:-translate-y-1 hover:shadow-md" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
                 Get in Touch
               </a>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
