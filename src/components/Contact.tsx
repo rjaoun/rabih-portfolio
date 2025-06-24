@@ -1,4 +1,3 @@
-
 import { useState, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import { useCursor } from "@/context/CursorContext";
@@ -8,10 +7,10 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { 
   ArrowUpRight, 
-  Twitter, 
   Linkedin, 
   Instagram, 
-  Github 
+  Github,
+  X
 } from "lucide-react";
 
 const Contact = () => {
@@ -53,7 +52,7 @@ const Contact = () => {
   };
 
   const socials = [
-    { name: "Twitter", url: "https://x.com/RaYz0o0o0o", icon: <Twitter size={16} /> },
+    { name: "X", url: "https://x.com/RaYz0o0o0o", icon: <X size={16} /> },
     { name: "LinkedIn", url: "https://linkedin.com/in/rabih-aoun", icon: <Linkedin size={16} /> },
     { name: "Instagram", url: "https://www.instagram.com/rjaoun", icon: <Instagram size={16} /> },
     { name: "GitHub", url: "https://github.com/rjaoun", icon: <Github size={16} /> },
