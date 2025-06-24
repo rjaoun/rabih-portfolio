@@ -1,4 +1,3 @@
-
 import { useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { useCursor } from "@/context/CursorContext";
@@ -18,6 +17,16 @@ interface Project {
 const projects: Project[] = [
 	{
 		id: 1,
+		title: "Budget Tracker",
+		category: "Full-Stack Application",
+		image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1920&q=80",
+		description:
+			"A comprehensive personal finance app with real-time data sync and interactive analytics",
+		slug: "budget-tracker",
+		year: "2024",
+	},
+	{
+		id: 2,
 		title: "RenTools Website",
 		category: "Web Application",
 		image: "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=1920&q=80",
@@ -27,7 +36,7 @@ const projects: Project[] = [
 		year: "2023",
 	},
 	{
-		id: 2,
+		id: 3,
 		title: "Islamic Sticker Haven",
 		category: "E-commerce",
 		image: "https://images.pexels.com/photos/323340/pexels-photo-323340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -37,7 +46,7 @@ const projects: Project[] = [
 		year: "2023",
 	},
 	{
-		id: 3,
+		id: 4,
 		title: "Digital Art Installation",
 		category: "Installation",
 		image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
@@ -47,7 +56,7 @@ const projects: Project[] = [
 		year: "2022",
 	},
 	{
-		id: 4,
+		id: 5,
 		title: "Ecosystem Mobile App",
 		category: "Mobile Design",
 		image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",

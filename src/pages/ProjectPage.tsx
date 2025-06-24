@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { CursorProvider, useCursor } from "@/context/CursorContext";
@@ -25,6 +24,25 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
+    title: "Budget Tracker",
+    category: "Full-Stack Application",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1920&q=80",
+    description: "A comprehensive personal finance app with real-time data sync and interactive analytics",
+    slug: "budget-tracker",
+    year: "2024",
+    content: {
+      brief: "Built a responsive personal finance application using React, TypeScript, and Node.js. The app features real-time data synchronization, drag-and-drop UI components, and interactive analytics dashboard. Designed a robust PostgreSQL database schema with RESTful API architecture achieving 95% test coverage. Successfully deployed on Replit with automatic scaling and HTTPS configuration for optimal user experience.",
+      role: "Full Stack Developer",
+      technologies: ["React", "TypeScript", "Node.js", "PostgreSQL", "RESTful API", "Replit"],
+      images: [
+        "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1920&q=80",
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1920&q=80",
+        "https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&w=1920&q=80"
+      ]
+    }
+  },
+  {
+    id: 2,
     title: "RenTools Website",
     category: "Web Application",
     image: "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=1920&q=80",
@@ -44,7 +62,7 @@ const projects: Project[] = [
     }
   },
   {
-    id: 2,
+    id: 3,
     title: "Islamic Sticker Haven",
     category: "E-commerce",
     image: "https://images.pexels.com/photos/323340/pexels-photo-323340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -64,7 +82,7 @@ const projects: Project[] = [
     }
   },
   {
-    id: 3,
+    id: 4,
     title: "Digital Art Installation",
     category: "Installation",
     image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
@@ -83,7 +101,7 @@ const projects: Project[] = [
     }
   },
   {
-    id: 4,
+    id: 5,
     title: "Ecosystem Mobile App",
     category: "Mobile Design",
     image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
