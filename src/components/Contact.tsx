@@ -53,10 +53,10 @@ const Contact = () => {
   };
 
   const socials = [
-    { name: "Twitter", url: "https://twitter.com", icon: <Twitter size={16} /> },
-    { name: "LinkedIn", url: "https://linkedin.com", icon: <Linkedin size={16} /> },
-    { name: "Instagram", url: "https://instagram.com", icon: <Instagram size={16} /> },
-    { name: "GitHub", url: "https://github.com", icon: <Github size={16} /> },
+    { name: "Twitter", url: "https://x.com/RaYz0o0o0o", icon: <Twitter size={16} /> },
+    { name: "LinkedIn", url: "https://linkedin.com/in/rabih-aoun", icon: <Linkedin size={16} /> },
+    { name: "Instagram", url: "https://www.instagram.com/rjaoun", icon: <Instagram size={16} /> },
+    { name: "GitHub", url: "https://github.com/rjaoun", icon: <Github size={16} /> },
   ];
 
   return (
