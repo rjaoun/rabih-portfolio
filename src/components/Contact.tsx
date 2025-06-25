@@ -1,4 +1,3 @@
-
 import { useState, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import { useCursor } from "@/context/CursorContext";
@@ -54,17 +53,19 @@ const Contact = () => {
   };
 
   const handleDownloadResume = () => {
-    // Create a downloadable resume PDF
-    const link = document.createElement('a');
-    link.href = '/resume.pdf'; // You'll need to add this file to your public folder
-    link.download = 'Rabih-Aoun-Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // Open resume in new window for printing/saving
+    const resumeWindow = window.open('/resume', '_blank');
+    if (resumeWindow) {
+      resumeWindow.focus();
+      // Add a small delay to ensure the page loads before showing print dialog
+      setTimeout(() => {
+        resumeWindow.print();
+      }, 1000);
+    }
     
     toast({
-      title: "Resume Downloaded!",
-      description: "Thanks for your interest in my work.",
+      title: "Resume Opened!",
+      description: "A new window opened with my resume. You can print or save it as PDF.",
     });
   };
 
