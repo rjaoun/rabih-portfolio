@@ -14,7 +14,7 @@ const Resume = () => {
         <div className="flex justify-between items-start">
           <div>
             <h1 className="text-4xl font-bold mb-2">Rabih Aoun</h1>
-            <h2 className="text-xl opacity-90">Full Stack Developer & Digital Designer</h2>
+            <h2 className="text-xl opacity-90">Vibe Developer & Digital Experience Creator</h2>
           </div>
           <button
             onClick={handlePrint}
@@ -28,19 +28,19 @@ const Resume = () => {
         <div className="flex flex-wrap gap-4 mt-6 text-sm">
           <div className="flex items-center gap-1">
             <Mail size={14} />
-            <span>contact@rabihaoun.dev</span>
+            <span>rjaoun@gmail.com</span>
           </div>
           <div className="flex items-center gap-1">
             <Phone size={14} />
-            <span>+1 (555) 123-4567</span>
+            <span>(647) 569-8471</span>
           </div>
           <div className="flex items-center gap-1">
             <MapPin size={14} />
-            <span>Your Location</span>
+            <span>Waterloo, ON</span>
           </div>
           <div className="flex items-center gap-1">
             <Globe size={14} />
-            <span>portfolio-url.com</span>
+            <span>rabihaoun.com</span>
           </div>
         </div>
       </header>
@@ -49,50 +49,66 @@ const Resume = () => {
         {/* Summary */}
         <section>
           <h3 className="text-2xl font-bold text-gray-800 border-b-2 border-[#51e2f5] pb-2 mb-4">
-            Professional Summary
+            Vibe Developer Philosophy
           </h3>
           <p className="text-gray-700 leading-relaxed">
-            Digital designer and developer with over 5 years of experience creating exceptional digital experiences. 
-            Specializes in blending creative design with technical implementation to build projects that stand out. 
-            Focused on innovation, attention to detail, and creating meaningful connections through digital interfaces.
+            Passionate vibe developer who creates digital experiences that don't just function—they resonate. 
+            With a foundation in computer programming and web development, I specialize in crafting applications 
+            that blend aesthetic appeal with seamless functionality. My approach combines technical precision 
+            with creative vision to build projects that capture the right energy and connect with users on a deeper level.
           </p>
         </section>
 
         {/* Experience */}
         <section>
           <h3 className="text-2xl font-bold text-gray-800 border-b-2 border-[#51e2f5] pb-2 mb-4">
-            Experience
+            Creative Development Journey
           </h3>
           
           <div className="space-y-6">
             <div>
               <div className="flex justify-between items-start mb-2">
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-800">Full Stack Developer</h4>
-                  <p className="text-[#51e2f5] font-medium">Budget Tracker Project</p>
+                  <h4 className="text-lg font-semibold text-gray-800">Vibe-Focused Full Stack Developer</h4>
+                  <p className="text-[#51e2f5] font-medium">Budget Tracker - Personal Finance Revolution</p>
                 </div>
                 <span className="text-gray-600">2024</span>
               </div>
               <ul className="list-disc list-inside text-gray-700 space-y-1 ml-4">
-                <li>Built responsive personal finance app with React, TypeScript, and Node.js</li>
-                <li>Implemented real-time data sync, drag-and-drop UI, and interactive analytics</li>
-                <li>Designed PostgreSQL database schema and RESTful API with 95% test coverage</li>
-                <li>Deployed on Replit with automatic scaling and HTTPS configuration</li>
+                <li>Engineered a vibe-driven personal finance app that makes budgeting feel intuitive and engaging</li>
+                <li>Crafted real-time data visualization with React, TypeScript, and Node.js that tells your money story</li>
+                <li>Designed drag-and-drop interactions that transform complex financial data into playful experiences</li>
+                <li>Deployed with seamless scaling on Replit, ensuring the vibe never breaks</li>
               </ul>
             </div>
 
             <div>
               <div className="flex justify-between items-start mb-2">
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-800">Frontend Developer</h4>
-                  <p className="text-[#51e2f5] font-medium">Islamic Sticker Haven</p>
+                  <h4 className="text-lg font-semibold text-gray-800">Creative Frontend Architect</h4>
+                  <p className="text-[#51e2f5] font-medium">Islamic Sticker Haven - Cultural E-commerce</p>
                 </div>
                 <span className="text-gray-600">2023</span>
               </div>
               <ul className="list-disc list-inside text-gray-700 space-y-1 ml-4">
-                <li>Developed e-commerce platform with React, Tailwind CSS, and TypeScript</li>
-                <li>Implemented customization options and responsive design</li>
-                <li>Utilized Shadcn UI for consistent component library</li>
+                <li>Built culturally-conscious e-commerce platform with React and modern design principles</li>
+                <li>Implemented customization features that let creativity flow through user interactions</li>
+                <li>Utilized Shadcn UI and Tailwind CSS for a cohesive, accessible design system</li>
+              </ul>
+            </div>
+
+            <div>
+              <div className="flex justify-between items-start mb-2">
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-800">Digital Experience Creator</h4>
+                  <p className="text-[#51e2f5] font-medium">RenTools - Community Connection Platform</p>
+                </div>
+                <span className="text-gray-600">2023</span>
+              </div>
+              <ul className="list-disc list-inside text-gray-700 space-y-1 ml-4">
+                <li>Developed community-driven platform connecting tool owners with renters</li>
+                <li>Focused on user experience that builds trust and facilitates meaningful connections</li>
+                <li>Created responsive design that works seamlessly across all devices and contexts</li>
               </ul>
             </div>
           </div>
@@ -101,14 +117,14 @@ const Resume = () => {
         {/* Skills */}
         <section>
           <h3 className="text-2xl font-bold text-gray-800 border-b-2 border-[#51e2f5] pb-2 mb-4">
-            Technical Skills
+            Vibe Tech Stack
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <h4 className="font-semibold text-gray-800 mb-2">Frontend Development</h4>
+              <h4 className="font-semibold text-gray-800 mb-2">Creative Frontend</h4>
               <div className="flex flex-wrap gap-2">
-                {['React', 'TypeScript', 'Tailwind CSS', 'Three.js', 'WebGL'].map((skill) => (
+                {['React', 'TypeScript', 'Tailwind CSS', 'Three.js', 'WebGL', 'Framer Motion'].map((skill) => (
                   <span key={skill} className="px-3 py-1 bg-[#51e2f5]/10 text-[#51e2f5] rounded-full text-sm font-medium">
                     {skill}
                   </span>
@@ -117,9 +133,31 @@ const Resume = () => {
             </div>
             
             <div>
-              <h4 className="font-semibold text-gray-800 mb-2">Backend & Database</h4>
+              <h4 className="font-semibold text-gray-800 mb-2">Backend & Data Flow</h4>
               <div className="flex flex-wrap gap-2">
-                {['Node.js', 'PostgreSQL', 'RESTful API', 'MongoDB', 'Express'].map((skill) => (
+                {['Node.js', 'PostgreSQL', 'RESTful API', 'MongoDB', 'Express', 'Supabase'].map((skill) => (
+                  <span key={skill} className="px-3 py-1 bg-[#51e2f5]/10 text-[#51e2f5] rounded-full text-sm font-medium">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+            
+            <div>
+              <h4 className="font-semibold text-gray-800 mb-2">Design & UX Vibes</h4>
+              <div className="flex flex-wrap gap-2">
+                {['Figma', 'Adobe Creative Suite', 'UI/UX Design', 'Responsive Design', 'Accessibility'].map((skill) => (
+                  <span key={skill} className="px-3 py-1 bg-[#51e2f5]/10 text-[#51e2f5] rounded-full text-sm font-medium">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+            
+            <div>
+              <h4 className="font-semibold text-gray-800 mb-2">Development Workflow</h4>
+              <div className="flex flex-wrap gap-2">
+                {['Git', 'Agile', 'Testing', 'CI/CD', 'Performance Optimization'].map((skill) => (
                   <span key={skill} className="px-3 py-1 bg-[#51e2f5]/10 text-[#51e2f5] rounded-full text-sm font-medium">
                     {skill}
                   </span>
@@ -132,23 +170,39 @@ const Resume = () => {
         {/* Projects */}
         <section>
           <h3 className="text-2xl font-bold text-gray-800 border-b-2 border-[#51e2f5] pb-2 mb-4">
-            Featured Projects
+            Vibe Projects That Hit Different
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="border border-gray-200 rounded-lg p-4">
+            <div className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
               <h4 className="font-semibold text-gray-800 mb-2">Budget Tracker</h4>
-              <p className="text-gray-600 text-sm mb-2">Full-Stack Application</p>
+              <p className="text-gray-600 text-sm mb-2">Full-Stack Financial Vibe App</p>
               <p className="text-gray-700 text-sm">
-                Comprehensive personal finance app with real-time data sync and interactive analytics.
+                Personal finance reimagined with intuitive design and real-time analytics that make budgeting feel natural.
               </p>
             </div>
             
-            <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-semibold text-gray-800 mb-2">RenTools Website</h4>
-              <p className="text-gray-600 text-sm mb-2">Web Application</p>
+            <div className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+              <h4 className="font-semibold text-gray-800 mb-2">RenTools Platform</h4>
+              <p className="text-gray-600 text-sm mb-2">Community Connection Web App</p>
               <p className="text-gray-700 text-sm">
-                Platform connecting tool owners with people who need to rent equipment.
+                Bridging communities through tool sharing, built with trust and user experience at the core.
+              </p>
+            </div>
+            
+            <div className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+              <h4 className="font-semibold text-gray-800 mb-2">Islamic Sticker Haven</h4>
+              <p className="text-gray-600 text-sm mb-2">Cultural E-commerce Platform</p>
+              <p className="text-gray-700 text-sm">
+                Culturally-conscious e-commerce with customization features that celebrate identity and creativity.
+              </p>
+            </div>
+            
+            <div className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+              <h4 className="font-semibold text-gray-800 mb-2">Portfolio Showcase</h4>
+              <p className="text-gray-600 text-sm mb-2">Interactive Developer Portfolio</p>
+              <p className="text-gray-700 text-sm">
+                Dynamic portfolio showcasing development philosophy through immersive digital experiences.
               </p>
             </div>
           </div>
@@ -157,16 +211,34 @@ const Resume = () => {
         {/* Education */}
         <section>
           <h3 className="text-2xl font-bold text-gray-800 border-b-2 border-[#51e2f5] pb-2 mb-4">
-            Education & Certifications
+            Learning Journey & Credentials
           </h3>
           
-          <div>
-            <div className="flex justify-between items-start mb-2">
-              <div>
-                <h4 className="text-lg font-semibold text-gray-800">Computer Science Degree</h4>
-                <p className="text-[#51e2f5] font-medium">University Name</p>
+          <div className="space-y-4">
+            <div>
+              <div className="flex justify-between items-start mb-2">
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-800">Web Development Certificate</h4>
+                  <p className="text-[#51e2f5] font-medium">Humber College</p>
+                </div>
+                <span className="text-gray-600">2018-2019</span>
               </div>
-              <span className="text-gray-600">Year</span>
+              <p className="text-gray-700 text-sm ml-4">
+                Specialized in modern web technologies, user experience design, and responsive development practices.
+              </p>
+            </div>
+            
+            <div>
+              <div className="flex justify-between items-start mb-2">
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-800">Computer Programming Diploma</h4>
+                  <p className="text-[#51e2f5] font-medium">Seneca College</p>
+                </div>
+                <span className="text-gray-600">2014-2017</span>
+              </div>
+              <p className="text-gray-700 text-sm ml-4">
+                Comprehensive programming foundation covering software development, database management, and system architecture.
+              </p>
             </div>
           </div>
         </section>
@@ -183,6 +255,9 @@ const Resume = () => {
             <Linkedin size={14} />
             <span className="text-sm">linkedin.com/in/rabih-aoun</span>
           </div>
+        </div>
+        <div className="text-center mt-2 text-xs text-gray-500">
+          "Building digital experiences that vibe with purpose"
         </div>
       </footer>
     </div>
