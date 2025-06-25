@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { ThemeProvider } from "@/context/ThemeContext";
 import Index from "./pages/Index";
 import ProjectPage from "./pages/ProjectPage";
+import ResumePage from "./pages/ResumePage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -39,6 +40,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/project/:slug" element={<ProjectPage />} />
+              <Route path="/resume" element={<ResumePage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
