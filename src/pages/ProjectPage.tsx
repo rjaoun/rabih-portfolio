@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { CursorProvider, useCursor } from "@/context/CursorContext";
@@ -312,7 +311,7 @@ const ProjectContent = () => {
   }
 
   return (
-    <main className="pt-24 pb-20">
+    <main className="pt-24 pb-8">
       <div className="container max-w-5xl">
         {/* Project Header */}
         <div className="mb-16 space-y-6">
