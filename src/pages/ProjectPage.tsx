@@ -443,7 +443,7 @@ const ProjectContent = () => {
 
         {/* Project Images */}
         {project.content?.images && (
-          <div className="space-y-8 mb-16">
+          <div className="space-y-8 mb-12">
             {project.content.images.map((image, index) => (
               <div
                 key={index}
@@ -459,8 +459,8 @@ const ProjectContent = () => {
           </div>
         )}
 
-        {/* Call to Action */}
-        <div className="mt-16 pt-8 border-t border-border">
+        {/* Call to Action - moved up */}
+        <div className="mt-8 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
             <h2 className="text-xl font-medium">
               Interested in working together?
