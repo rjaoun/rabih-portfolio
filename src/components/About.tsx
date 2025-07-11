@@ -35,12 +35,27 @@ const About = () => {
                   src="/lovable-uploads/db8a99cc-23c8-4b7f-835f-0a6d27b99405.png" 
                 />
                 
+                {/* Creative scanline effect */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000 animate-pulse" style={{ background: 'repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(99, 102, 241, 0.1) 2px, rgba(99, 102, 241, 0.1) 4px)' }}></div>
+                
+                {/* Holographic overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent via-accent/20 to-primary/20 opacity-0 group-hover:opacity-60 transition-opacity duration-500 mix-blend-overlay"></div>
+                
+                {/* Floating code symbols */}
+                <div className="absolute top-8 left-8 text-primary/60 text-xs font-mono opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:translate-y-[-4px]">{'</>'}</div>
+                <div className="absolute bottom-12 right-12 text-accent/60 text-xs font-mono opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:translate-y-[4px]" style={{ animationDelay: '0.3s' }}>{'{ }'}</div>
+                <div className="absolute top-1/2 right-8 text-primary/40 text-xs font-mono opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:translate-x-[-4px]" style={{ animationDelay: '0.6s' }}>{'[ ]'}</div>
+                
                 {/* Overlay effects */}
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
-                {/* Floating geometric shapes */}
+                {/* Enhanced floating geometric shapes */}
                 <div className="absolute top-4 right-4 w-3 h-3 bg-primary rounded-full opacity-60 group-hover:opacity-100 group-hover:scale-150 transition-all duration-500 animate-pulse"></div>
                 <div className="absolute bottom-6 left-6 w-2 h-2 bg-accent rounded-full opacity-40 group-hover:opacity-80 group-hover:scale-125 transition-all duration-700 animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+                <div className="absolute top-1/3 left-4 w-1 h-1 bg-primary/60 rotate-45 opacity-30 group-hover:opacity-70 group-hover:scale-150 transition-all duration-600 animate-pulse" style={{ animationDelay: '1s' }}></div>
+                
+                {/* Pixelated border effect on hover */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500" style={{ background: 'linear-gradient(90deg, transparent 48%, #3b82f6 49%, #3b82f6 51%, transparent 52%), linear-gradient(180deg, transparent 48%, #3b82f6 49%, #3b82f6 51%, transparent 52%)', backgroundSize: '20px 20px' }}></div>
                 
                 {/* Subtle glow effect */}
                 <div className="absolute inset-0 rounded-2xl shadow-inner group-hover:shadow-2xl group-hover:shadow-primary/20 transition-shadow duration-500"></div>
