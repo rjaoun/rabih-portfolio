@@ -442,7 +442,7 @@ const ProjectContent = () => {
 
         {/* Project Images */}
         {project.content?.images && (
-          <div className="space-y-8 mb-12">
+          <div className="space-y-8 mb-4">
             {project.content.images.map((image, index) => (
               <div
                 key={index}
