@@ -440,23 +440,6 @@ const ProjectContent = () => {
           </div>
         )}
 
-        {/* Project Images */}
-        {project.content?.images && (
-          <div className="space-y-8 mb-4">
-            {project.content.images.map((image, index) => (
-              <div
-                key={index}
-                className="w-full overflow-hidden rounded-lg animate-on-scroll opacity-0"
-              >
-                <img
-                  src={image}
-                  alt={`${project.title} - Image ${index + 1}`}
-                  className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
-                />
-              </div>
-            ))}
-          </div>
-        )}
 
         {/* Call to Action - moved up */}
         <div className="mt-8 pt-8 border-t border-border">
