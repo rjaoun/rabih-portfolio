@@ -65,6 +65,16 @@ const projects: Project[] = [
 		slug: "ecosystem-mobile-app",
 		year: "2021",
 	},
+	{
+		id: 6,
+		title: "Line Wise Planner",
+		category: "Full-Stack Application",
+		image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=1920&q=80",
+		description:
+			"A productivity app for daily planning and scheduling",
+		slug: "line-wise-planner",
+		year: "2026",
+	},
 ];
 
 const Projects = () => {
