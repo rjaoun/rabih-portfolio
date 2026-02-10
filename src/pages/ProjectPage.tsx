@@ -192,6 +192,25 @@ const projects: Project[] = [
     }
   },
   {
+    id: 6,
+    title: "Line Wise Planner",
+    category: "Full-Stack Application",
+    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=1920&q=80",
+    description: "A productivity app for daily planning and scheduling",
+    slug: "line-wise-planner",
+    year: "2026",
+    content: {
+      brief: "Line Wise Planner is a full-stack productivity application designed for daily planning and scheduling. It helps users organize their tasks and goals efficiently with an intuitive, line-by-line planning interface.",
+      role: "Full Stack Developer",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Lovable"],
+      images: [
+        "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=1920&q=80",
+        "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=1920&q=80"
+      ],
+      website: "https://line-wise-planner.lovable.app"
+    }
+  },
+  {
     id: 5,
     title: "Ecosystem Mobile App",
     category: "Mobile Design",
