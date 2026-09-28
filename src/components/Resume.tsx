@@ -108,6 +108,21 @@ const Resume = () => {
             <div>
               <div className="flex justify-between items-start mb-2">
                 <div>
+                  <h4 className="text-lg font-semibold text-gray-800">Web Developer & UI/UX Designer</h4>
+                  <p className="text-[#51e2f5] font-medium">Line Wise Planner - Productivity Web Application</p>
+                </div>
+                <span className="text-gray-600">2026</span>
+              </div>
+              <ul className="list-disc list-inside text-gray-700 space-y-1 ml-4">
+                <li>Built a productivity web app for daily planning and scheduling</li>
+                <li>Designed intuitive scheduling flows and responsive layouts across devices</li>
+                <li>Delivered a clean, modern interface focused on usability and clarity</li>
+              </ul>
+            </div>
+
+            <div>
+              <div className="flex justify-between items-start mb-2">
+                <div>
                   <h4 className="text-lg font-semibold text-gray-800">Web Developer & UX Designer</h4>
                   <p className="text-[#51e2f5] font-medium">RenTools - Community Tool-Sharing Platform</p>
                 </div>
@@ -154,7 +169,7 @@ const Resume = () => {
             <div>
               <h4 className="font-semibold text-gray-800 mb-2">UI/UX & Design</h4>
               <div className="flex flex-wrap gap-2">
-                {['Figma', 'Adobe Creative Suite', 'Wireframing & Prototyping', 'Design Systems', 'Accessibility (WCAG)', 'User Research'].map((skill) => (
+                {['Figma', 'Adobe Photoshop', 'Adobe Illustrator', 'Adobe Creative Suite', 'Wireframing & Prototyping', 'Design Systems', 'Accessibility (WCAG)', 'User Research'].map((skill) => (
                   <span key={skill} className="px-3 py-1 bg-[#51e2f5]/10 text-[#51e2f5] rounded-full text-sm font-medium">
                     {skill}
                   </span>
@@ -203,6 +218,14 @@ const Resume = () => {
               <p className="text-gray-600 text-sm mb-2">Cultural E-commerce Platform</p>
               <p className="text-gray-700 text-sm">
                 E-commerce storefront with product customization flows and a reusable, accessible component system.
+              </p>
+            </div>
+
+            <div className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+              <h4 className="font-semibold text-gray-800 mb-2">Line Wise Planner</h4>
+              <p className="text-gray-600 text-sm mb-2">Productivity Web Application</p>
+              <p className="text-gray-700 text-sm">
+                Daily planning and scheduling app with intuitive flows and a clean, modern interface.
               </p>
             </div>
 
