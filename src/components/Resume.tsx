@@ -40,7 +40,14 @@ const Resume = () => {
           </div>
           <div className="flex items-center gap-1">
             <Globe size={14} />
-            <span>rabihaoun.com</span>
+            <a
+              href="https://rabihaoun.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline decoration-[#51e2f5] underline-offset-2"
+            >
+              rabihaoun.netlify.app
+            </a>
           </div>
         </div>
       </header>
