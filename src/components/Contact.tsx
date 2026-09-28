@@ -53,19 +53,17 @@ const Contact = () => {
   };
 
   const handleDownloadResume = () => {
-    // Open resume in new window for printing/saving
-    const resumeWindow = window.open('/resume', '_blank');
-    if (resumeWindow) {
-      resumeWindow.focus();
-      // Add a small delay to ensure the page loads before showing print dialog
-      setTimeout(() => {
-        resumeWindow.print();
-      }, 1000);
-    }
-    
+    // Trigger a direct download of the pre-generated PDF
+    const link = document.createElement('a');
+    link.href = '/resume.pdf';
+    link.download = 'Rabih-Aoun-Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
     toast({
-      title: "Resume Opened!",
-      description: "A new window opened with my resume. You can print or save it as PDF.",
+      title: "Resume Downloaded!",
+      description: "Your PDF download has started. You can also view it live at rabihaoun.com/resume.",
     });
   };
 
