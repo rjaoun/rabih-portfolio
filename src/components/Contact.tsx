@@ -63,7 +63,7 @@ const Contact = () => {
 
     toast({
       title: "Resume Downloaded!",
-      description: "Your PDF download has started. You can also view it live at rabihaoun.com/resume.",
+      description: "Your PDF download has started. You can also view it live at rabihaoun.netlify.app/resume.",
     });
   };
 
