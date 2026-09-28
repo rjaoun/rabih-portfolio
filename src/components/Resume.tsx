@@ -119,6 +119,21 @@ const Resume = () => {
                 <li>Delivered a clean, modern interface focused on usability and clarity</li>
               </ul>
             </div>
+
+            <div>
+              <div className="flex justify-between items-start mb-2">
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-800">Web Developer & UX Designer</h4>
+                  <p className="text-[#51e2f5] font-medium">RenTools - Community Tool-Sharing Platform</p>
+                </div>
+                <span className="text-gray-600">2023</span>
+              </div>
+              <ul className="list-disc list-inside text-gray-700 space-y-1 ml-4">
+                <li>Developed a community platform connecting tool owners with renters</li>
+                <li>Designed user flows that build trust and make listing, browsing, and contact frictionless</li>
+                <li>Created responsive layouts that work seamlessly across mobile, tablet, and desktop</li>
+              </ul>
+            </div>
           </div>
         </section>
 
