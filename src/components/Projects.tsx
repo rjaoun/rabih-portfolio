@@ -46,26 +46,6 @@ const projects: Project[] = [
 		year: "2023",
 	},
 	{
-		id: 4,
-		title: "Digital Art Installation",
-		category: "Installation",
-		image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-		description:
-			"An interactive art installation that responds to viewer movements",
-		slug: "digital-art-installation",
-		year: "2022",
-	},
-	{
-		id: 5,
-		title: "Ecosystem Mobile App",
-		category: "Mobile Design",
-		image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
-		description:
-			"A sustainable living companion app designed for eco-conscious users",
-		slug: "ecosystem-mobile-app",
-		year: "2021",
-	},
-	{
 		id: 6,
 		title: "Line Wise Planner",
 		category: "Full-Stack Application",
