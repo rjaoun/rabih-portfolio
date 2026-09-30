@@ -152,46 +152,6 @@ const projects: Project[] = [
     }
   },
   {
-    id: 4,
-    title: "Digital Art Installation",
-    category: "Installation",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-    description: "An interactive art installation that responds to viewer movements",
-    slug: "digital-art-installation",
-    year: "2022",
-    content: {
-      brief: "This digital art installation uses motion sensors to detect viewer movements and translates them into dynamic visual displays. The project aims to blur the line between the physical and digital world, creating a unique interactive experience.",
-      role: "Creative Developer",
-      technologies: ["Processing", "Arduino", "Computer Vision", "Custom Hardware"],
-      images: [
-        "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-        "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
-        "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
-      ],
-      caseStudy: {
-        challenge: "Creating an immersive digital art experience that responds to human movement in real-time. The challenge was to seamlessly integrate hardware sensors with visual processing software to create meaningful artistic interactions that engage viewers and create memorable experiences.",
-        solution: "Developed a motion-reactive installation using Arduino-based sensors and Processing for visual generation. Created custom algorithms that translate movement patterns into dynamic visual art, allowing viewers to become part of the artistic creation through their physical presence and movements.",
-        process: [
-          "Conceptualized interactive art experience focusing on human movement",
-          "Designed and prototyped motion detection hardware system",
-          "Developed custom Processing sketches for visual generation",
-          "Integrated Arduino sensors with computer vision algorithms",
-          "Created mapping system translating movement to visual patterns",
-          "Built sturdy installation framework for public display",
-          "Tested and calibrated system for optimal responsiveness",
-          "Installed and fine-tuned for gallery exhibition"
-        ],
-        results: [
-          "Successfully created immersive interactive art experience",
-          "Achieved real-time responsiveness with minimal latency",
-          "Engaged hundreds of visitors in meaningful artistic interaction",
-          "Demonstrated innovative fusion of technology and creative expression",
-          "Received positive feedback from art critics and technology enthusiasts"
-        ]
-      }
-    }
-  },
-  {
     id: 6,
     title: "Line Wise Planner",
     category: "Full-Stack Application",
