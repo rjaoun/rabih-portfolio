@@ -170,46 +170,6 @@ const projects: Project[] = [
       website: "https://line-wise-planner.lovable.app"
     }
   },
-  {
-    id: 5,
-    title: "Ecosystem Mobile App",
-    category: "Mobile Design",
-    image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
-    description: "A sustainable living companion app designed for eco-conscious users",
-    slug: "ecosystem-mobile-app",
-    year: "2021",
-    content: {
-      brief: "Ecosystem is a mobile application designed to help users make more sustainable choices in their daily lives. The app provides personalized recommendations, tracks environmental impact, and connects users with eco-friendly products and services.",
-      role: "Mobile UX Designer",
-      technologies: ["Swift", "Kotlin", "Figma", "Firebase"],
-      images: [
-        "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
-        "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-        "https://images.unsplash.com/photo-1518770660439-4636190af475"
-      ],
-      caseStudy: {
-        challenge: "Designing a mobile app that motivates users to adopt sustainable living practices while providing actionable insights and maintaining long-term engagement. The challenge was to make environmental consciousness accessible and rewarding without overwhelming users with complex data.",
-        solution: "Created an intuitive mobile experience with gamification elements, personalized sustainability recommendations, and impact tracking. Designed a clean interface that simplifies complex environmental data into actionable insights, encouraging users to make eco-friendly choices through positive reinforcement and community features.",
-        process: [
-          "Conducted user research on sustainable living motivations",
-          "Created user personas and journey maps for eco-conscious users",
-          "Designed wireframes and prototypes in Figma",
-          "Developed information architecture for complex environmental data",
-          "Implemented gamification elements to encourage engagement",
-          "Created personalized recommendation algorithm",
-          "Built impact tracking and visualization features",
-          "Tested usability with target audience and iterated design"
-        ],
-        results: [
-          "Designed engaging mobile experience promoting sustainable living",
-          "Created intuitive interface simplifying complex environmental data",
-          "Implemented gamification increasing user retention by 60%",
-          "Developed personalized recommendation system improving user engagement",
-          "Achieved positive user feedback for clean design and motivational approach"
-        ]
-      }
-    }
-  }
 ];
 
 const ProjectNavigation = () => {
